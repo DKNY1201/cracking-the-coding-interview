@@ -17,6 +17,17 @@ class LinkedList:
         for val in vals:
             self.add_node_to_tail(val)
 
+    # Get k th node, zero index
+    def get_k_th_node(self, k):
+        i = 0
+        node = self.head
+
+        while node and i < k:
+            i += 1
+            node = node.next
+
+        return node if i == k else None
+
     def to_list(self):
         res = []
 
